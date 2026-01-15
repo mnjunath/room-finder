@@ -1,5 +1,3 @@
-/* ===== FIND ROOMS PAGE ===== */
-
 .rooms-page {
   max-width: 900px;
   margin: 20px auto;
@@ -12,8 +10,6 @@
   margin-bottom: 16px;
   color: #243a5e;
 }
-
-/* ===== FILTERS ===== */
 
 .filters {
   display: flex;
@@ -42,16 +38,12 @@
   box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.15);
 }
 
-/* ===== STATES ===== */
-
 .rooms-state {
   text-align: center;
   font-size: 14px;
   color: #4b5563;
   margin-top: 20px;
 }
-
-/* ===== MOBILE ===== */
 
 @media (max-width: 600px) {
   .rooms-title {
@@ -62,8 +54,6 @@
     padding: 12px;
   }
 }
-
-/* ===== ANIMATION ===== */
 
 @keyframes fadeUp {
   from {

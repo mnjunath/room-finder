@@ -5,7 +5,7 @@ import Rooms from "./pages/Rooms";
 import AddRoom from "./pages/AddRoom";
 import MyRooms from "./pages/MyRooms";
 import Navbar from "./components/Navbar";
-import ProtectedRoute from "./components/ProtectedRoute";
+import AuthGate from "./components/AuthGate";
 import ProtectedOwnerRoute from "./components/ProtectedOwnerRoute";
 import EditRoom from "./pages/EditRoom";
 
@@ -15,18 +15,15 @@ export default function App() {
       <Navbar />
 
       <Routes>
-        {/* PUBLIC ROUTES */}
-        <Route path="/" element={<Rooms />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
 
-        {/* PROTECTED ROUTES */}
         <Route
-          path="/my-rooms"
+          path="/"
           element={
-            <ProtectedRoute>
-              <MyRooms />
-            </ProtectedRoute>
+            <AuthGate>
+              <Rooms />
+            </AuthGate>
           }
         />
 
@@ -45,6 +42,15 @@ export default function App() {
             <ProtectedOwnerRoute>
               <EditRoom />
             </ProtectedOwnerRoute>
+          }
+        />
+
+        <Route
+          path="/my-rooms"
+          element={
+            <AuthGate>
+              <MyRooms />
+            </AuthGate>
           }
         />
       </Routes>

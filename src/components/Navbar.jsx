@@ -7,7 +7,6 @@ export default function Navbar() {
   const location = useLocation();
   const [role, setRole] = useState(null);
 
-  // Hide navbar on auth pages
   if (location.pathname === "/login" || location.pathname === "/register") {
     return null;
   }

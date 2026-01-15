@@ -7,7 +7,6 @@ export default function Rooms() {
   const [rooms, setRooms] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // Filters
   const [location, setLocation] = useState("");
   const [minPrice, setMinPrice] = useState("");
   const [maxPrice, setMaxPrice] = useState("");
@@ -54,7 +53,6 @@ export default function Rooms() {
     <div className="rooms-page">
       <h2 className="rooms-title">Find Rooms</h2>
 
-      {/* FILTERS */}
       <div className="filters">
         <input
           className="filter-input"
@@ -94,7 +92,6 @@ export default function Rooms() {
         />
       </div>
 
-      {/* STATES */}
       {loading && (
         <p className="rooms-state">Loading rooms...</p>
       )}
@@ -105,7 +102,6 @@ export default function Rooms() {
         </p>
       )}
 
-      {/* ROOM CARDS */}
       {!loading &&
         rooms.map((room) => (
           <RoomCard key={room.id} room={room} />

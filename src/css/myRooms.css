@@ -1,5 +1,3 @@
-/* ===== MY ROOMS PAGE ===== */
-
 .my-rooms-page {
   max-width: 900px;
   margin: 24px auto;
@@ -15,8 +13,6 @@
   font-weight: 600;
 }
 
-/* ===== STATES ===== */
-
 .my-rooms-state {
   text-align: center;
   margin-top: 40px;
@@ -24,13 +20,9 @@
   font-size: 15px;
 }
 
-/* ===== ROOM ACTIONS ===== */
-
 .room-actions {
   margin-top: 12px;
 }
-
-/* ===== DELETE BUTTON ===== */
 
 .delete-btn {
   background: #ef4444;
@@ -45,18 +37,14 @@
 
 .delete-btn:hover {
   background: #dc2626;
-  transform: translateY(-1px); /* ✅ FIXED */
+  transform: translateY(-1px); 
 }
-
-/* ===== MOBILE ===== */
 
 @media (max-width: 640px) {
   .my-rooms-title {
     font-size: 20px;
   }
 }
-
-/* ===== ANIMATION ===== */
 
 @keyframes fadeUp {
   from {

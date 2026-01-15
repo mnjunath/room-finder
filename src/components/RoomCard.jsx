@@ -31,7 +31,6 @@ export default function RoomCard({ room, onDelete, showActions }) {
 
   return (
     <div className="room-card">
-      {/* LEFT */}
       <div className="room-details">
         <h3 className="room-title">{room.title}</h3>
 
@@ -60,7 +59,6 @@ export default function RoomCard({ room, onDelete, showActions }) {
         )}
       </div>
 
-      {/* RIGHT */}
       {images.length > 0 && (
         <div className="room-slider">
           <div
