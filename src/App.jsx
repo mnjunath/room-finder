@@ -6,6 +6,8 @@ import AddRoom from "./pages/AddRoom";
 import MyRooms from "./pages/MyRooms";
 import EditRoom from "./pages/EditRoom";
 import Navbar from "./components/Navbar";
+import ProtectedRoute from "./components/ProtectedRoute";
+import ProtectedOwnerRoute from "./components/ProtectedOwnerRoute";
 
 export default function App() {
   return (
@@ -16,9 +18,33 @@ export default function App() {
         <Route path="/" element={<Rooms />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/add-room" element={<AddRoom />} />
-        <Route path="/my-rooms" element={<MyRooms />} />
-        <Route path="/edit-room/:id" element={<EditRoom />} />
+
+        <Route
+          path="/my-rooms"
+          element={
+            <ProtectedRoute>
+              <MyRooms />
+            </ProtectedRoute>
+          }
+        />
+
+        <Route
+          path="/add-room"
+          element={
+            <ProtectedOwnerRoute>
+              <AddRoom />
+            </ProtectedOwnerRoute>
+          }
+        />
+
+        <Route
+          path="/edit-room/:id"
+          element={
+            <ProtectedOwnerRoute>
+              <EditRoom />
+            </ProtectedOwnerRoute>
+          }
+        />
       </Routes>
     </>
   );

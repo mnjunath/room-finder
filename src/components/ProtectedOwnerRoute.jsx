@@ -13,6 +13,7 @@ export default function ProtectedOwnerRoute({ children }) {
       } = await supabase.auth.getUser();
 
       if (!user) {
+        setAllowed(false);
         setLoading(false);
         return;
       }
@@ -31,7 +32,10 @@ export default function ProtectedOwnerRoute({ children }) {
   }, []);
 
   if (loading) return <p>Loading...</p>;
-  if (!allowed) return <Navigate to="/" replace />;
+
+  if (!allowed) {
+    return <Navigate to="/" replace />;
+  }
 
   return children;
 }
