@@ -6,6 +6,11 @@ This project is built using **React (Vite)** on the frontend and **Supabase** as
 
 ---
 
+## 🌐 Live Demo
+[Visit Room Finder](https://room-finder3.netlify.app/)
+
+---
+
 ## 🚀 Features
 
 ### 👤 User (Room Finder)
