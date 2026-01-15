@@ -1,0 +1,77 @@
+/* ===== FIND ROOMS PAGE ===== */
+
+.rooms-page {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 16px;
+  animation: fadeUp 0.4s ease;
+}
+
+.rooms-title {
+  font-size: 22px;
+  margin-bottom: 16px;
+  color: #243a5e;
+}
+
+/* ===== FILTERS ===== */
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  background: #f8fafc;
+  padding: 14px;
+  border-radius: 10px;
+  margin-bottom: 22px;
+  border: 1px solid #e5e7eb;
+}
+
+.filter-input {
+  flex: 1;
+  min-width: 140px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #cfd9e2;
+  font-size: 14px;
+  outline: none;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.filter-input:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.15);
+}
+
+/* ===== STATES ===== */
+
+.rooms-state {
+  text-align: center;
+  font-size: 14px;
+  color: #4b5563;
+  margin-top: 20px;
+}
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 600px) {
+  .rooms-title {
+    font-size: 20px;
+  }
+
+  .filters {
+    padding: 12px;
+  }
+}
+
+/* ===== ANIMATION ===== */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

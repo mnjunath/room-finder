@@ -1,0 +1,144 @@
+/* ===== ADD ROOM PAGE ===== */
+
+.add-room-page {
+  max-width: 520px;
+  margin: 40px auto;
+
+  /* ✅ Proper breathing room on BOTH sides */
+  padding: 0 24px;
+
+  animation: fadeUp 0.4s ease;
+  box-sizing: border-box;
+}
+
+/* ===== CARD ===== */
+
+.add-room-card {
+  background: #ffffff;
+  border-radius: 16px;
+
+  /* ❌ No hard border */
+  border: none;
+
+  /* ✅ Soft elevation */
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.08),
+    0 4px 10px rgba(0, 0, 0, 0.04);
+
+  padding: 28px;
+
+  /* ✅ Prevent edge overflow */
+  box-sizing: border-box;
+}
+
+.add-room-title {
+  text-align: center;
+  margin-bottom: 22px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #243a5e;
+}
+
+/* ===== INPUTS ===== */
+
+.add-room-input {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 14px;
+  border-radius: 10px;
+  border: 1px solid #d6dee8;
+  font-size: 14px;
+  outline: none;
+  background: #fafbfd;
+  box-sizing: border-box;
+
+  transition: all 0.25s ease;
+}
+
+.add-room-input:focus {
+  background: #ffffff;
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.15);
+}
+
+/* ===== FILE INPUT ===== */
+
+.add-room-file {
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+/* ===== IMAGE PREVIEW ===== */
+
+.preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.preview-grid img {
+  width: 100%;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+/* ===== BUTTON ===== */
+
+.add-room-btn {
+  width: 100%;
+  margin-top: 22px;
+  padding: 13px;
+  background: linear-gradient(135deg, #4a90e2, #357acb);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.add-room-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(74, 144, 226, 0.35);
+}
+
+.add-room-btn:disabled {
+  background: #9bbce5;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 480px) {
+  .add-room-page {
+    padding: 0 16px; /* ✅ phone-safe padding */
+  }
+
+  .add-room-card {
+    padding: 22px;
+    border-radius: 14px;
+  }
+
+  .add-room-title {
+    font-size: 20px;
+  }
+}
+
+/* ===== ANIMATION ===== */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

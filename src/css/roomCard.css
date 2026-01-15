@@ -1,0 +1,135 @@
+/* ===== ROOM CARD ===== */
+
+.room-card {
+  display: flex;
+  gap: 20px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 18px;
+  margin-bottom: 22px;
+  animation: fadeUp 0.4s ease;
+}
+
+.room-details {
+  flex: 1;
+}
+
+.room-title {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #243a5e;
+}
+
+.room-details p {
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #374151;
+}
+
+/* ===== IMAGE SLIDER ===== */
+
+.room-slider {
+  position: relative;
+  width: 320px;
+  height: 220px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #f3f6fa;
+}
+
+.slider-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* ===== ARROWS ===== */
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.55);
+  color: white;
+  border: none;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.slider-btn:hover {
+  background: rgba(0, 0, 0, 0.75);
+  transform: translateY(-50%) scale(1.05);
+}
+
+.slider-btn.left {
+  left: 10px;
+}
+
+.slider-btn.right {
+  right: 10px;
+}
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 768px) {
+  .room-card {
+    flex-direction: column;
+  }
+
+  .room-slider {
+    width: 100%;
+    height: 220px;
+  }
+}
+
+/* ===== ANIMATION ===== */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.edit-btn {
+  background: #4a90e2;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  font-size: 13px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: 8px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.edit-btn:hover {
+  background: #357acb;
+  transform: translateY(-1px);
+}
