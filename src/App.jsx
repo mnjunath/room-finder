@@ -4,10 +4,8 @@ import Register from "./pages/Register";
 import Rooms from "./pages/Rooms";
 import AddRoom from "./pages/AddRoom";
 import MyRooms from "./pages/MyRooms";
-import Navbar from "./components/Navbar";
-import AuthGate from "./components/AuthGate";
-import ProtectedOwnerRoute from "./components/ProtectedOwnerRoute";
 import EditRoom from "./pages/EditRoom";
+import Navbar from "./components/Navbar";
 
 export default function App() {
   return (
@@ -15,44 +13,12 @@ export default function App() {
       <Navbar />
 
       <Routes>
+        <Route path="/" element={<Rooms />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-
-        <Route
-          path="/"
-          element={
-            <AuthGate>
-              <Rooms />
-            </AuthGate>
-          }
-        />
-
-        <Route
-          path="/add-room"
-          element={
-            <ProtectedOwnerRoute>
-              <AddRoom />
-            </ProtectedOwnerRoute>
-          }
-        />
-
-        <Route
-          path="/edit-room/:id"
-          element={
-            <ProtectedOwnerRoute>
-              <EditRoom />
-            </ProtectedOwnerRoute>
-          }
-        />
-
-        <Route
-          path="/my-rooms"
-          element={
-            <AuthGate>
-              <MyRooms />
-            </AuthGate>
-          }
-        />
+        <Route path="/add-room" element={<AddRoom />} />
+        <Route path="/my-rooms" element={<MyRooms />} />
+        <Route path="/edit-room/:id" element={<EditRoom />} />
       </Routes>
     </>
   );
