@@ -15,12 +15,17 @@ export default function App() {
       <Navbar />
 
       <Routes>
+        {/* PUBLIC ROUTES */}
+        <Route path="/" element={<Rooms />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
 
-        <Route path="/" element={
+        {/* PROTECTED ROUTES */}
+        <Route
+          path="/my-rooms"
+          element={
             <ProtectedRoute>
-              <Rooms />
+              <MyRooms />
             </ProtectedRoute>
           }
         />
@@ -40,15 +45,6 @@ export default function App() {
             <ProtectedOwnerRoute>
               <EditRoom />
             </ProtectedOwnerRoute>
-          }
-        />
-
-        <Route
-          path="/my-rooms"
-          element={
-            <ProtectedRoute>
-              <MyRooms />
-            </ProtectedRoute>
           }
         />
       </Routes>
